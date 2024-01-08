@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hr-app-deployment
+  labels:
+    app: hr-app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: hr-app
+  template:
+    metadata:
+      name: hr-app-pod
+      labels:
+        app: hr-app
+    spec: 
+      containers:
+        - name: hr-app-container
+          image: nginx:1.18
+

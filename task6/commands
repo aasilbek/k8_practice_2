@@ -1,0 +1,3 @@
+kubectl apply -f hr-ap-deployment.yml 
+kubectl get pods --selector 'app=hr-app' 
+
