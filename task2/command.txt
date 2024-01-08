@@ -1,0 +1,4 @@
+kubectl config set-context --current --namespace=s-40
+kubectl apply -f nginx1-definition.yml
+kubectl apply -f nginx2-definition.yml
+kubectl get pods

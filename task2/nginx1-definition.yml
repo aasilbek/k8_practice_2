@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx1
+  labels: 
+   project: practice
+   author: Asilbek
+
+spec:
+  containers:
+    - name: nginx1
+      image: nginx
