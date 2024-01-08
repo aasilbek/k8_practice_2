@@ -1,0 +1,2 @@
+kubectl apply -f flask-app-deployment.yml
+kubectl port-forward pod/flask-app-deployment-665bc8b679-pqshv 5000:5000
