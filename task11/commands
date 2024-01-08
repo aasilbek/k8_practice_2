@@ -1,0 +1,2 @@
+kubectl apply -f service.yml
+curl 95.216.206.151:30819 > output
