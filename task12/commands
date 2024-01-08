@@ -1,0 +1,3 @@
+kubectl cp nginx1:output output
+kubectl apply -f service.yml
+
