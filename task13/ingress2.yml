@@ -1,0 +1,21 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  annotations:
+    kubernetes.io/ingress.class: nginx
+  creationTimestamp: null
+  name: flask-app
+spec:
+  rules:
+  - host: asilbek.nvrbckdown.uz
+    http:
+      paths:
+      - backend:
+          service:
+            name: flask-app-internel-service
+            port:
+              number: 80
+        path: /
+        pathType: Prefix
+status:
+  loadBalancer: {}
