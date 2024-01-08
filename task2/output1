@@ -1,0 +1,52 @@
+Name:             nginx1
+Namespace:        s-40
+Priority:         0
+Service Account:  default
+Node:             node4/95.217.135.101
+Start Time:       Mon, 08 Jan 2024 17:45:50 +0300
+Labels:           author=Asilbek
+                  project=practice
+Annotations:      <none>
+Status:           Running
+IP:               10.233.65.186
+IPs:
+  IP:  10.233.65.186
+Containers:
+  nginx1:
+    Container ID:   containerd://426f070d6736fb48e3692e698e69d770b64a18440c201a0774921f1ac6188fda
+    Image:          nginx
+    Image ID:       docker.io/library/nginx@sha256:2bdc49f2f8ae8d8dc50ed00f2ee56d00385c6f8bc8a8b320d0a294d9e3b49026
+    Port:           <none>
+    Host Port:      <none>
+    State:          Running
+      Started:      Mon, 08 Jan 2024 17:45:51 +0300
+    Ready:          True
+    Restart Count:  0
+    Environment:    <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-qdbrg (ro)
+Conditions:
+  Type              Status
+  Initialized       True 
+  Ready             True 
+  ContainersReady   True 
+  PodScheduled      True 
+Volumes:
+  kube-api-access-qdbrg:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    ConfigMapOptional:       <nil>
+    DownwardAPI:             true
+QoS Class:                   BestEffort
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type    Reason     Age    From               Message
+  ----    ------     ----   ----               -------
+  Normal  Scheduled  8m57s  default-scheduler  Successfully assigned s-40/nginx1 to node4
+  Normal  Pulling    8m56s  kubelet            Pulling image "nginx"
+  Normal  Pulled     8m56s  kubelet            Successfully pulled image "nginx" in 807ms (807ms including waiting)
+  Normal  Created    8m56s  kubelet            Created container nginx1
+  Normal  Started    8m56s  kubelet            Started container nginx1
