@@ -1,0 +1,54 @@
+Name:             busybox
+Namespace:        s-40
+Priority:         0
+Service Account:  default
+Node:             node3/65.109.14.160
+Start Time:       Mon, 08 Jan 2024 18:09:27 +0300
+Labels:           <none>
+Annotations:      <none>
+Status:           Running
+IP:               10.233.68.162
+IPs:
+  IP:  10.233.68.162
+Containers:
+  busybox:
+    Container ID:  containerd://cea0e61c027cea416946d29bbc06253fc401f2b53c5313a7a3516b2640e2f7c7
+    Image:         busybox
+    Image ID:      docker.io/library/busybox@sha256:ba76950ac9eaa407512c9d859cea48114eeff8a6f12ebaa5d32ce79d4a017dd8
+    Port:          <none>
+    Host Port:     <none>
+    Command:
+      sleep
+      3600
+    State:          Running
+      Started:      Mon, 08 Jan 2024 18:09:28 +0300
+    Ready:          True
+    Restart Count:  0
+    Environment:    <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-dtx2c (ro)
+Conditions:
+  Type              Status
+  Initialized       True 
+  Ready             True 
+  ContainersReady   True 
+  PodScheduled      True 
+Volumes:
+  kube-api-access-dtx2c:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    ConfigMapOptional:       <nil>
+    DownwardAPI:             true
+QoS Class:                   BestEffort
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type    Reason     Age   From               Message
+  ----    ------     ----  ----               -------
+  Normal  Scheduled  59s   default-scheduler  Successfully assigned s-40/busybox to node3
+  Normal  Pulling    59s   kubelet            Pulling image "busybox"
+  Normal  Pulled     58s   kubelet            Successfully pulled image "busybox" in 824ms (824ms including waiting)
+  Normal  Created    58s   kubelet            Created container busybox
+  Normal  Started    58s   kubelet            Started container busybox
